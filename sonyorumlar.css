@@ -1,0 +1,38 @@
+a.sneeit-srcbw { 
+    /*item-color*/color: #000000;/*item-color*/ 
+    /*border-color*/border-top: 1px solid #dddddd;/*border-color*/ 
+    display: block; 
+    padding: 1em 1.5em; 
+    position: relative; 
+} 
+.sneeit-srcbw-icon-comment { 
+    position: absolute; 
+    left: 0; 
+    top: 1.1em; 
+} 
+.sneeit-srcbw-icon-arrow { 
+    /* arrow-icon-color*/color: #ff4400;/* arrow-icon-color*/ 
+    position: absolute; 
+    right: 0; 
+    font-size: 200%; 
+    top: 50%; 
+    margin-top: -0.55em; 
+} 
+.sneeit-srcbw-credit { 
+    font-size: 90%; 
+    text-align: right; 
+    padding: 1em 0; 
+    /*credit*/display: none;/*credit*/ 
+    /*border-color*/border-top: 1px solid #dddddd;/*border-color*/ 
+} 
+html[dir="rtl"] .sneeit-srcbw-icon-comment { 
+    right:0; 
+    left: auto; 
+} 
+html[dir="rtl"] .sneeit-srcbw-icon-arrow{ 
+    left:0; 
+    right: auto; 
+} 
+html[dir="rtl"] .sneeit-srcbw-credit { 
+    text-align: left; 
+} 
