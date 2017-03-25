@@ -1,0 +1,21 @@
+/*<![CDATA[*/
+if (typeof firstText == undefined) firstText = First;
+if (typeof lastText == undefined) lastText = Last;
+var noPage;
+var currentPage;
+var currentPageNo;
+var postLabel;
+pagecurrentg();
+function looppagecurrentg(pageInfo){pagenumber:parseInt(numPages / 2);ifpagenumber:= numPages - pageNumber) { numPages = pageNumber * 2 + 1}pageStart = currentPageNo - pageNumber;
+if (pageStart < 1) pageStart = 1;
+lastPageNo = parseInt(pageInfo / perPage) + 1;
+if (lastPageNo - 1 == pageInfo / perPage) lastPageNo = lastPageNo - 1;
+pageEnd = pageStart + numPages - 1;
+if (pageEnd > lastPageNo) pageEnd = lastPageNo;
+html += "<span class='showpageOf'>Page " + currentPageNo + ' of ' + lastPageNo + </span>;
+var prevNumber = parseInt(currentPageNo) - 1;
+//Iccsi was here,doing magic if (currentPageNo > 1){ifcurrentpage:= page) { html += '<span class="showpage firstpage"><a href="' + home_page + "> + firstText + </a></span>}else{html:'<span class="displaypageNum firstpage"><a href="/search/label/' + postLabel + ?&max-results= + perPage + "> + firstText + </a></span>}if (currentPageNo > 2){ifcurrentpageno:= 3) { if (currentPage == "page") { html += '<span class="showpage"><a href="' + home_page + "> + prevText + </a></span>}else{html:'<span class="displaypageNum"><a href="/search/label/' + postLabel + ?&max-results= + perPage + "> + prevText + </a></span>}else{ifcurrentpage:= page) { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + prevNumber + ');return false">' + prevText + </a></span>}else{html:'<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + prevNumber + ');return false">' + prevText + </a></span>}if (pageStart > 1){ifcurrentpage:= page) { html += '<span class="displaypageNum"><a href="' + home_page + ">1</a></span>}else{html:'<span class="displaypageNum"><a href="/search/label/' + postLabel + ?&max-results= + perPage + ">1</a></span>}if (pageStart > 2){html:' ... '}for (var jj = pageStart; jj <= pageEnd; jj++){ifcurrentpageno:= jj) { html += '<span class="pagecurrent">' + jj + </span>}else if (jj == 1){ifcurrentpage:= page) { html += '<span class="displaypageNum"><a href="' + home_page + ">1</a></span>}else{html:'<span class="displaypageNum"><a href="/search/label/' + postLabel + ?&max-results= + perPage + ">1</a></span>}else{ifcurrentpage:= page) { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + jj + ');return false">' + jj + </a></span>}else{html:'<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + jj + ');return false">' + jj + </a></span>}if (pageEnd < lastPageNo - 1){html:...}if (pageEnd < lastPageNo){ifcurrentpage:= page) { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastPageNo + </a></span>}else{html:'<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastPageNo + </a></span>}var nextnumber = parseInt(currentPageNo) + 1;
+if (currentPageNo < (lastPageNo - 1)){ifcurrentpage:= page) { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + </a></span>}else{html:'<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + </a></span>}if (currentPageNo < lastPageNo){}else{html:'<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastText + </a></span>}var pageArea = document.getElementsByName(pageArea);
+var blogPager = document.getElementById(blog-pager);
+for (var p = 0; p < pageArea.length; p++){pageareapinnerhtml:html}if (blogPager){blogpagerinnerhtml:html}function totalcountdata(root){varfeed:root.feed;vartotaldata:parseInt(feed.openSearch$totalResults.$t,10)}function pagecurrentg(){varthisurl:urlactivepage;ifthisurlindexof/search/label/:-1) { if (thisUrl.indexOf(?updated-max) != -1) { postLabel = thisUrl.substring(thisUrl.indexOf(/search/label/) + 14,thisUrl.indexOf(?updated-max))}else{postlabel:thisUrl.substring(thisUrl.indexOf(/search/label/) + 14,thisUrl.indexOf(?&max))}if (thisUrl.indexOf(?q=) == -1 && thisUrl.indexOf(.html) == -1){ifthisurlindexof/search/label/:= -1) { currentPage = page}
+      /*]]>*/
