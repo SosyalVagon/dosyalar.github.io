@@ -1,7 +1,7 @@
 //<![CDATA[
 var key = window.location.href.split("yürü/")[1].replace("/","")
 var urls={
-'sv':'http://www.sosyalvagon.com/',
+'sv':'http://www.zaferzent.com/',
 }
 if(key){
     if(urls[key]){
